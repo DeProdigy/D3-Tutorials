@@ -8,20 +8,31 @@
 <body>
 
   <script>
-    var data = [10];
+    var data = [10, 20];
 
     var canvas = d3.select('body')
                     .append('svg')
                     .attr('width', 500)
                     .attr('height', 500);
 
-    var circle = canvas.selectAll('circle')
+    //manually adding a circle
+    var circle = canvas.append('circle')
+                    .attr('cx', 50)
+                    .attr('cy', 100)
+                    .attr('r', 25);
+
+    //if a circle exists, it will use the second value to create a circle dynamically
+    //enter is when you have more data elements than existing DOM elements
+    var circles = canvas.selectAll('circle')
                     .data(data)
                     .enter()
                       .append('circle')
                       .attr('cx', 50)
                       .attr('cy', 50)
                       .attr('r', 25);
+
+    //
+
 
   </script>
 
