@@ -14,10 +14,17 @@
                     .attr('width', 500)
                     .attr('height', 500);
 
-    var circle1 = canvas.append('circle')
+    var circle = canvas.append('circle')
                     .attr('cx', 50)
-                    .attr('cy', 100)
+                    .attr('cy', 50)
                     .attr('r', 25);
+
+    circle.transition()
+                    .duration(1500)
+                    .delay(2000)
+                    .attr('fill', 'red')
+                    .attr('cy', 250)
+                    .attr('cx', 250);
 
   </script>
 
