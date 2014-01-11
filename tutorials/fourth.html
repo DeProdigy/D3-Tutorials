@@ -15,6 +15,7 @@
                     .attr('height', 500);
 
     var circle = canvas.append('circle')
+                    .attr('fill', '#34495E')
                     .attr('cx', 50)
                     .attr('cy', 50)
                     .attr('r', 25);
@@ -23,15 +24,15 @@
                     .duration(2000)
                     .ease("bounce")
                     // .delay(2000)
-                    .attr('fill', 'red')
+                    .attr('fill', '#1ABC9C')
                     .attr('cy', 250)
                     .attr('cx', 250)
                     .transition()
                         .attr('cy', 50)
-                        .attr('fill', 'yellow')
+                        .attr('fill', '#9B59B6')
                         .transition()
                             .attr('cx', 50)
-                            .attr('fill', 'blue');
+                            .attr('fill', '#34495E');
 
   </script>
 
