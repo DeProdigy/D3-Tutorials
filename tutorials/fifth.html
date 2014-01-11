@@ -9,7 +9,12 @@
 
   <script>
 
+    var canvas = d3.select('body').append('svg')
+                    .attr('width', 500)
+                    .attr('height', 500);
 
+    var group = canvas.append('g')
+                    .attr('transform', 'translate(100, 100)');
 
   </script>
 
