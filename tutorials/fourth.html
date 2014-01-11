@@ -20,17 +20,18 @@
                     .attr('r', 25);
 
     circle.transition()
-                    .duration(1500)
+                    .duration(2000)
+                    .ease("bounce")
                     // .delay(2000)
                     .attr('fill', 'red')
                     .attr('cy', 250)
                     .attr('cx', 250)
                     .transition()
                         .attr('cy', 50)
-                        .attr('fill', 'green')
+                        .attr('fill', 'yellow')
                         .transition()
                             .attr('cx', 50)
-                            .attr('fill', 'yellow');
+                            .attr('fill', 'blue');
 
   </script>
 
