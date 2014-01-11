@@ -21,10 +21,16 @@
 
     circle.transition()
                     .duration(1500)
-                    .delay(2000)
+                    // .delay(2000)
                     .attr('fill', 'red')
                     .attr('cy', 250)
-                    .attr('cx', 250);
+                    .attr('cx', 250)
+                    .transition()
+                        .attr('cy', 50)
+                        .attr('fill', 'green')
+                        .transition()
+                            .attr('cx', 50)
+                            .attr('fill', 'yellow');
 
   </script>
 
