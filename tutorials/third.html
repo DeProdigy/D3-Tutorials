@@ -8,7 +8,7 @@
 <body>
 
   <script>
-    var data = [10, 20];
+    // var data = [10, 20];
 
     var canvas = d3.select('body')
                     .append('svg')
@@ -16,22 +16,41 @@
                     .attr('height', 500);
 
     //manually adding a circle
-    var circle = canvas.append('circle')
+    var circle1 = canvas.append('circle')
+                    // .attr('fill', 'yellow')
                     .attr('cx', 50)
                     .attr('cy', 100)
                     .attr('r', 25);
 
+    var circle2 = canvas.append('circle')
+                    .attr('cx', 50)
+                    .attr('cy', 200)
+                    .attr('r', 25);
+
+
     //if a circle exists, it will use the second value to create a circle dynamically
     //enter is when you have more data elements than existing DOM elements
+    // var circles = canvas.selectAll('circle')
+    //                 .data(data)
+    //                 //updates the existing ones with red fill
+    //                 .attr('fill', 'red')
+    //                 .enter()
+    //                   .append('circle')
+    //                   .attr('cx', 50)
+    //                   .attr('cy', 50)
+    //                   .attr('fill', 'green')
+    //                   .attr('r', 25);
+
+    var data = [10];
+
+    //exit selection
+    //more DOM elements than data
     var circles = canvas.selectAll('circle')
                     .data(data)
-                    .enter()
-                      .append('circle')
-                      .attr('cx', 50)
-                      .attr('cy', 50)
-                      .attr('r', 25);
+                    .attr('fill', 'green')
+                    .exit()
+                      .attr('fill', 'blue')
 
-    //
 
 
   </script>
