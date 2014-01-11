@@ -32,7 +32,10 @@
                         .attr('fill', '#E74C3C')
                         .transition()
                             .attr('cx', 50)
-                            .attr('fill', '#34495E');
+                            .attr('fill', '#34495E')
+                    //after the transition is over, runs the anonymous function
+                    //could also use 'start'
+                    .each('end', function() { d3.select(this).attr('fill', '#ECF0F1'); });
 
   </script>
 
