@@ -22,6 +22,7 @@
                     .attr('transform', 'translate(300, 300)');
 
     var arc = d3.svg.arc()
+                    //for pie chart .innerRadius(0)
                     .innerRadius(200)
                     .outerRadius(r);
 
@@ -36,7 +37,14 @@
 
     arcs.append('path')
                     .attr('d', arc)
-                    .attr('fill', function (d) { return color(d.data); });;
+                    .attr('fill', function (d) { return color(d.data); });
+
+    //centrs the labels at the right place
+    arcs.append('text')
+                    .attr('transform', function (d) { return 'translate(' + arc.centroid(d) + ')'; })
+                    .attr('text-anchor', 'middle')
+                    .attr('font-size', '1.5em')
+                    .text(function (d) { return d.data });
 
   </script>
 
